@@ -1,0 +1,25 @@
+.nav {
+  background-color: rgb(222, 206, 206);
+  width: 100%;
+  margin: 0 auto;
+  padding: 5px 0px;
+  margin-bottom: 10px;
+}
+
+.nav ul {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  gap: 150px;
+}
+
+.nav ul li {
+  font-size: 28px;
+  list-style: none;
+  transform: none;
+  transition: all 0.1s ease-in-out;
+}
+
+.nav ul li:hover {
+  transform: scale(1.05);
+}
