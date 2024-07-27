@@ -1,4 +1,5 @@
-//  Category Page (Home)
+export const API_URL = "https://books-api.nomadcoders.workers.dev/lists";
+
 export default interface ICategories {
   status: string;
   copyright: string;

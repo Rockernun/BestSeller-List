@@ -1,9 +1,7 @@
 import Link from "next/link";
 import React from "react";
-import IBooks from "../../utils/BooksInterface";
+import IBooks, { API_URL } from "../../utils/BooksInterface";
 import IBook from "../../utils/BooksInterface";
-
-const API_URL = "https://books-api.nomadcoders.workers.dev/list?name=";
 
 async function getBooks(id: string) {
   return fetch(`${API_URL}${id}`).then((response) => response.json());
