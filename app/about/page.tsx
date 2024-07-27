@@ -3,9 +3,9 @@ import { title } from "process";
 import React from "react";
 
 export const metadata = {
-  title: "About Us",
+  title: "About",
 };
 
 export default function AboutUs() {
-  return <h1>This is About Us Page!</h1>;
+  return <h1>This is About Page!</h1>;
 }
