@@ -2,8 +2,11 @@ import React from "react";
 import Navigation from "../components/navigation";
 
 export const metadata = {
-  title: "%s | Best Seller",
-  description: "New York Times Best Seller",
+  title: {
+    template: "%s | New York Best Sellers!",
+    default: "New York Best Sellers",
+  },
+  description: "New York Best Seller Explorer",
 };
 
 export default function RootLayout({

@@ -17,10 +17,10 @@ export default async function Home() {
   const categories: ICategories = await getBestSeller();
   return (
     <div className={styles.container}>
-      <ul>
+      <ul className={styles.categories}>
         {categories.results.map((list: ICategory, index) => (
           <Link key={index} prefetch href={`list/${list.list_name_encoded}`}>
-            <li>{list.list_name} &rarr;</li>
+            <li>{list.list_name} &rarr; </li>
           </Link>
         ))}
       </ul>

@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "../../styles/layout.module.css";
 
 export default function RootLayout({
   children,
@@ -6,8 +7,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div>
-      <h1>The New York Times Best Seller Explorer</h1>
+    <div className={styles.layout}>
+      <h1 className={styles.title}>The New York Times Best Seller Explorer</h1>
       {children}
     </div>
   );

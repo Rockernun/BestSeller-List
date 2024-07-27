@@ -4,6 +4,13 @@ import IBooks, { API_URL } from "../../utils/BooksInterface";
 import IBook from "../../utils/BooksInterface";
 import styles from "../../../styles/list.module.css";
 
+export async function generateMetadata({ params: { id } }) {
+  const books: IBooks = await getBooks(id);
+  return {
+    title: books.results.list_name,
+  };
+}
+
 async function getBooks(id: string) {
   return fetch(`${API_URL}${id}`).then((response) => response.json());
 }
@@ -17,8 +24,11 @@ export default async function Books({ params: { id } }) {
         {books.results.books.map((book: IBook, index) => (
           <li className={styles.book} key={index}>
             <img src={book.book_image} />
-            <span className={styles.title}>Title : {book.title}</span>
-            <span className={styles.author}>Author : {book.author}</span>
+            <div className={styles.wrapper}>
+              <span className={styles.title}>Title : {book.title}</span>
+              <span className={styles.author}>Author : {book.author}</span>
+            </div>
+            <p className={styles.description}>{book.description}</p>
             <Link href={book.amazon_product_url} target={"_blank"}>
               <span className={styles.buy}> Buy Now! &rarr;</span>
             </Link>

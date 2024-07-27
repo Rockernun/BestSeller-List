@@ -1,10 +1,11 @@
 import React from "react";
+import styles from "../../styles/layout.module.css";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div>
+    <div className={styles.title}>
       {children}
-      &copy; NextJs is Great!
+      &copy; NextJS is Awesome!
     </div>
   );
 }

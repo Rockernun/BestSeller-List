@@ -1,4 +1,3 @@
-//  Navigation Bar Component
 "use client";
 
 import { usePathname } from "next/navigation";
@@ -10,12 +9,16 @@ export default function Navigation() {
   const path = usePathname();
   return (
     <nav className={styles.nav}>
-      <ul>
-        <li>
-          <Link href="/">Home</Link> {path === "/" ? "✅" : ""}
+      <ul className={styles.navList}>
+        <li className={path === "/" ? styles.active : ""}>
+          <Link href="/" className={styles.navLink}>
+            Home
+          </Link>
         </li>
-        <li>
-          <Link href="/about">About</Link> {path === "/about" ? "✅" : ""}
+        <li className={path === "/about" ? styles.active : ""}>
+          <Link href="/about" className={styles.navLink}>
+            About
+          </Link>
         </li>
       </ul>
     </nav>
