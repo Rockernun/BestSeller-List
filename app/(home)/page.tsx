@@ -1,7 +1,7 @@
 //  Best Seller Page
 import React from "react";
-import Category from "../../components/category";
 import styles from "../../styles/home.module.css";
+import Link from "next/link";
 
 export const metadata = {
   title: "Home",
@@ -14,13 +14,33 @@ async function getBestSeller() {
   return fetch(API_URL).then((response) => response.json());
 }
 
+interface ICategories {
+  status: string;
+  copyright: string;
+  num_results: number;
+  results: [];
+}
+
+interface ICategory {
+  list_name: string;
+  display_name: string;
+  list_name_encoded: string;
+  oldest_published_date: string;
+  newest_published_date: string;
+  updated: string;
+}
+
 export default async function Home() {
-  const categories = await getBestSeller();
+  const categories: ICategories = await getBestSeller();
   return (
     <div className={styles.container}>
-      {categories?.results.map((category, index: number) => (
-        <Category key={index} list_name={category.list_name} />
-      ))}
+      <ul>
+        {categories.results.map((list: ICategory, index) => (
+          <Link key={index} prefetch href={`list/${list.list_name_encoded}`}>
+            <li>{list.list_name} &rarr;</li>
+          </Link>
+        ))}
+      </ul>
     </div>
   );
 }
