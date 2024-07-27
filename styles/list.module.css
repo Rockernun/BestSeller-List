@@ -5,8 +5,8 @@
   justify-content: center;
   min-height: 100vh;
   padding: 20px;
-  margin-top: 50px;
-  background-color: #f5f5f5;
+  margin-top: 70px;
+  background-color: rgba(20, 168, 188, 0.5);
 }
 
 .lists {
@@ -19,7 +19,8 @@
 .list {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  padding-right: 40px;
+  gap: 100px;
   justify-content: center;
 }
 
@@ -27,19 +28,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 600px;
+  height: 650px;
   width: 300px;
-  background-color: #fff; /* 카드 배경색 */
-  border-radius: 10px; /* 카드 모서리 둥글게 */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 부드러운 그림자 추가 */
-  padding: 15px; /* 카드 내부 여백 */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
   margin-bottom: 70px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .book:hover {
-  transform: scale(1.02); /* 호버 시 약간의 확대 효과 */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 호버 시 그림자 강조 */
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .book img {
@@ -55,52 +56,52 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid #ddd; /* 얇은 테두리 */
-  border-radius: 5px; /* 모서리 둥글게 */
-  padding: 10px; /* 내부 여백 */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
   margin-top: 10px;
-  margin-bottom: 10px; /* 항목 간의 간격 추가 */
-  background-color: #fafafa; /* 배경색 추가 */
+  margin-bottom: 10px;
+  background-color: #fafafa;
 }
 
 .title {
   text-align: center;
-  color: #222; /* 제목 색상 */
-  font-size: 20px; /* 제목 폰트 크기 */
-  font-weight: 600; /* 제목 두께 강조 */
-  margin-bottom: 5px; /* 제목과 작가 간의 간격 */
+  color: #222;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 5px;
 }
 
 .author {
   text-align: center;
-  color: #555; /* 작가 색상 */
-  font-size: 16px; /* 작가 폰트 크기 */
-  font-weight: 400; /* 작가 두께 */
+  color: #555;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .description {
   text-align: center;
-  color: #666; /* 설명 색상 */
-  font-size: 14px; /* 설명 폰트 크기 */
+  color: #666;
+  font-size: 14px;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
 .buy {
-  padding: 10px 20px; /* 버튼 패딩 조정 */
-  color: #fff; /* 버튼 텍스트 색상 */
-  background-color: #333; /* 버튼 배경색 */
-  border: none; /* 버튼 테두리 제거 */
-  border-radius: 30px; /* 버튼 모서리 둥글게 */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 버튼 그림자 추가 */
-  cursor: pointer; /* 버튼 커서 변경 */
-  text-align: center; /* 버튼 텍스트 가운데 정렬 */
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #333;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  text-align: center;
   text-decoration: none;
   display: inline-block;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* 버튼 호버 효과 */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .buy:hover {
-  background-color: #555; /* 호버 시 배경색 변경 */
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* 호버 시 그림자 강조 */
+  background-color: #555;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
